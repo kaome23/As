@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ясмина Джанибекова — Преподаватель русского языка и литературы</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emeraldDark: '#071c18',
+                        emeraldCard: '#0b2621',
+                        emeraldBorder: '#164037',
+                        goldAccent: '#d4af37',
+                        goldHover: '#e5c158',
+                        beigeText: '#e8e2d5',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Cormorant Garamond', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #f3e7c4 0%, #d4af37 50%, #aa8033 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-border-glow {
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.15);
+        }
+        .hero-glow {
+            background: radial-gradient(circle at 50% 50%, rgba(13, 59, 49, 0.6) 0%, rgba(7, 28, 24, 0) 70%);
+        }
+    </style>
+</head>
+<body class="bg-emeraldDark text-beigeText font-sans antialiased selection:bg-goldAccent selection:text-emeraldDark">
+
+    <!-- Header / Шапка -->
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-emeraldDark/90 backdrop-blur-md border-b border-emeraldBorder">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-full bg-emeraldCard text-goldAccent flex items-center justify-center font-serif text-xl font-bold border border-goldAccent/40 group-hover:border-goldAccent transition-colors">
+                    ЯД
+                </div>
+                <div>
+                    <span class="block font-serif font-bold text-xl text-white tracking-wide group-hover:text-goldAccent transition-colors">Ясмина Джанибекова</span>
+                    <span class="block text-xs text-goldAccent/80 font-medium tracking-wider">Преподаватель русского языка & литературы</span>
+                </div>
+            </a>
+
+            <!-- Десктоп Меню -->
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#about" class="text-sm font-medium text-slate-300 hover:text-goldAccent transition-colors">О себе</a>
+                <a href="#services" class="text-sm font-medium text-slate-300 hover:text-goldAccent transition-colors">Услуги и цены</a>
+                <a href="#reviews" class="text-sm font-medium text-slate-300 hover:text-goldAccent transition-colors">Отзывы</a>
+                <a href="#contact" class="text-sm font-medium text-slate-300 hover:text-goldAccent transition-colors">Контакты</a>
+                <a href="#booking" class="px-5 py-2.5 rounded-full bg-gradient-to-r from-goldAccent to-amber-600 text-emeraldDark font-semibold text-sm hover:brightness-110 shadow-lg shadow-goldAccent/10 transition-all duration-200">
+                    Записаться на урок
+                </a>
+            </nav>
+
+            <!-- Мобильная кнопка меню -->
+            <button id="menu-btn" class="md:hidden p-2 text-goldAccent hover:text-white focus:outline-none">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Мобильное меню -->
+        <div id="mobile-menu" class="hidden md:hidden bg-emeraldCard border-b border-emeraldBorder px-4 pt-4 pb-6 space-y-4 shadow-2xl">
+            <a href="#about" class="mobile-link block px-3 py-2 rounded-lg text-slate-200 hover:bg-emeraldBorder font-medium">О себе</a>
+            <a href="#services" class="mobile-link block px-3 py-2 rounded-lg text-slate-200 hover:bg-emeraldBorder font-medium">Услуги и цены</a>
+            <a href="#reviews" class="mobile-link block px-3 py-2 rounded-lg text-slate-200 hover:bg-emeraldBorder font-medium">Отзывы</a>
+            <a href="#contact" class="mobile-link block px-3 py-2 rounded-lg text-slate-200 hover:bg-emeraldBorder font-medium">Контакты</a>
+            <a href="#booking" class="mobile-link block w-full text-center py-3 rounded-lg bg-goldAccent text-emeraldDark font-bold shadow">Записаться на урок</a>
+        </div>
+    </header>
+
+    <!-- Главный экран (Hero Section) -->
+    <section class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden hero-glow">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                
+                <!-- Текст Hero -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emeraldCard border border-goldAccent/30 text-goldAccent text-xs font-semibold uppercase tracking-wider">
+                        <i class="fa-solid fa-award"></i> Эффективная подготовка к ОГЭ и ЕГЭ
+                    </div>
+                    
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                        Ясмина Джанибекова
+                        <span class="block text-2xl sm:text-3xl lg:text-4xl font-serif gold-gradient-text mt-2 font-normal">
+                            Репетитор по русскому языку и литературе
+                        </span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
+                        Помогаю освоить тонкости русской словесности, сдать экзамены на высокие баллы и полюбить предмет без скучной зубрежки.
+                    </p>
+
+                    <!-- Кнопки действий -->
+                    <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#booking" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-goldAccent to-amber-600 text-emeraldDark font-bold hover:brightness-110 shadow-xl shadow-goldAccent/10 transition-all duration-200 text-center flex items-center justify-center gap-3">
+                            <span>Записаться на бесплатный урок</span>
+                            <i class="fa-solid fa-arrow-right text-sm"></i>
+                        </a>
+                        <a href="https://t.me/" target="_blank" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-emeraldCard text-beigeText font-medium border border-emeraldBorder hover:border-goldAccent/50 transition-all duration-200 text-center flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-telegram text-xl text-sky-400"></i>
+                            <span>Связаться в Telegram</span>
+                        </a>
+                    </div>
+
+                    <!-- Статистика -->
+                    <div class="pt-8 border-t border-emeraldBorder/80 grid grid-cols-3 gap-4 text-center lg:text-left">
+                        <div>
+                            <div class="font-serif text-3xl font-bold text-goldAccent">90+</div>
+                            <div class="text-xs text-slate-400 mt-1">Средний результат ЕГЭ</div>
+                        </div>
+                        <div>
+                            <div class="font-serif text-3xl font-bold text-goldAccent">5+ лет</div>
+                            <div class="text-xs text-slate-400 mt-1">Преподавательской практики</div>
+                        </div>
+                        <div>
+                            <div class="font-serif text-3xl font-bold text-goldAccent">100%</div>
+                            <div class="text-xs text-slate-400 mt-1">Поступление в ВУЗы</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Блок Фото с визуальным фейлбэком (SVG) -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-md">
+                        <div class="absolute -inset-1 bg-gradient-to-tr from-goldAccent via-emerald-600 to-amber-600 rounded-3xl blur-md opacity-40"></div>
+                        
+                        <div class="relative rounded-2xl overflow-hidden bg-emeraldCard border-2 border-goldAccent/40 gold-border-glow aspect-[3/4] flex items-center justify-center">
+                            
+                            <!-- Вывод вашей фотографии + Встроенный резервный рисунок учителя -->
+                            <img src="1000847489_2.jpg" 
+                                 alt="Ясмина Джанибекова - Учитель" 
+                                 class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-105"
+                                 onerror="this.style.display='none'; document.getElementById('teacher-svg-fallback').classList.remove('hidden');">
+
+                            <!-- SVG Иллюстрация Учителя у доски (Резервная карточка) -->
+                            <div id="teacher-svg-fallback" class="hidden w-full h-full relative flex flex-col items-center justify-center bg-emeraldCard p-6 text-center">
+                                <svg class="w-full h-full max-h-80" viewBox="0 0 300 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- Школьная доска -->
+                                    <rect x="20" y="30" width="260" height="180" rx="8" fill="#07201a" stroke="#d4af37" stroke-width="3"/>
+                                    <!-- Надпись на доске -->
+                                    <text x="40" y="70" fill="#a7f3d0" font-family="serif" font-size="16" italic>Сегодня:</text>
+                                    <text x="40" y="100" fill="#e8e2d5" font-family="sans-serif" font-size="12">1) Проверка тетрадей</text>
+                                    <text x="40" y="125" fill="#e8e2d5" font-family="sans-serif" font-size="12">2) Новая тема: Сочинение</text>
+                                    <text x="40" y="150" fill="#e8e2d5" font-family="sans-serif" font-size="12">3) Домашнее задание</text>
+                                    <text x="200" y="190" fill="#d4af37" font-family="serif" font-size="14" font-weight="bold">ЕГЭ / ОГЭ</text>
+                                    
+                                    <!-- Стол и книги -->
+                                    <rect x="10" y="300" width="280" height="90" fill="#14362e" rx="4"/>
+                                    <rect x="30" y="270" width="70" height="30" fill="#854d0e" rx="2"/>
+                                    <rect x="35" y="255" width="60" height="15" fill="#1e3a8a" rx="2"/>
+                                    <text x="40" y="267" fill="#ffffff" font-size="9" font-family="sans-serif">Литература</text>
+                                    
+                                    <!-- Учитель (силуэт) -->
+                                    <circle cx="170" cy="220" r="30" fill="#fbcfe8"/> <!-- Лицо -->
+                                    <!-- Прическа -->
+                                    <path d="M140 210 C140 180, 200 180, 200 210 C195 190, 145 190, 140 210 Z" fill="#27272a"/>
+                                    <circle cx="170" cy="180" r="14" fill="#27272a"/> <!-- Пучок -->
+                                    <!-- Очки -->
+                                    <rect x="155" y="212" width="12" height="8" rx="2" stroke="#d4af37" stroke-width="2" fill="none"/>
+                                    <rect x="173" y="212" width="12" height="8" rx="2" stroke="#d4af37" stroke-width="2" fill="none"/>
+                                    <line x1="167" y1="216" x2="173" y2="216" stroke="#d4af37" stroke-width="2"/>
+                                    <!-- Костюм -->
+                                    <path d="M130 300 L145 250 Q170 240 195 250 L210 300 Z" fill="#18181b"/>
+                                    <path d="M160 250 L170 270 L180 250 Z" fill="#ffffff"/>
+                                </svg>
+                                <div class="mt-2 text-center">
+                                    <p class="font-serif font-bold text-lg text-white">Ясмина Джанибекова</p>
+                                    <p class="text-xs text-goldAccent">Преподаватель в процессе работы</p>
+                                </div>
+                            </div>
+
+                            <!-- Плашка с именем внизу фото -->
+                            <div class="absolute bottom-4 left-4 right-4 p-3 rounded-xl bg-emeraldDark/95 backdrop-blur-md border border-goldAccent/30 text-center">
+                                <p class="font-serif font-bold text-base text-white">Ясмина Джанибекова</p>
+                                <p class="text-xs text-goldAccent font-medium">Ваш наставник по русскому языку</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- О себе -->
+    <section id="about" class="py-24 bg-emeraldCard/60 border-y border-emeraldBorder">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-semibold uppercase tracking-widest text-goldAccent">Опыт и подходы</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-2">Почему со мной достигают высоких результатов</h2>
+                <div class="w-16 h-1 bg-goldAccent mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Карточка 1 -->
+                <div class="p-8 rounded-2xl bg-emeraldCard border border-emeraldBorder hover:border-goldAccent/40 transition-all duration-300">
+                    <div class="w-14 h-14 rounded-xl bg-emeraldDark text-goldAccent flex items-center justify-center text-2xl mb-6 border border-emeraldBorder">
+                        <i class="fa-solid fa-user-check"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-xl text-white mb-3">Индивидуальный подход</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Каждый ученик проходит первичную диагностику. На её основе мы формируем персональный план подготовки под вашу цель.
+                    </p>
+                </div>
+
+                <!-- Карточка 2 -->
+                <div class="p-8 rounded-2xl bg-emeraldCard border border-emeraldBorder hover:border-goldAccent/40 transition-all duration-300">
+                    <div class="w-14 h-14 rounded-xl bg-emeraldDark text-goldAccent flex items-center justify-center text-2xl mb-6 border border-emeraldBorder">
+                        <i class="fa-solid fa-diagram-project"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-xl text-white mb-3">Понятные схемы и правила</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Сложные правила правила орфографии и пунктуации переводим в понятные схемы и алгоритмы. Никакой бессмысленной зубрежки.
+                    </p>
+                </div>
+
+                <!-- Карточка 3 -->
+                <div class="p-8 rounded-2xl bg-emeraldCard border border-emeraldBorder hover:border-goldAccent/40 transition-all duration-300">
+                    <div class="w-14 h-14 rounded-xl bg-emeraldDark text-goldAccent flex items-center justify-center text-2xl mb-6 border border-emeraldBorder">
+                        <i class="fa-solid fa-book-journal-whills"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-xl text-white mb-3">Литературный анализ</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Учимся анализировать тексты классиков, выделять ключевые проблемы и с легкостью подбирать аргументы для итоговых сочинений.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Услуги и цены -->
+    <section id="services" class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-semibold uppercase tracking-widest text-goldAccent">Направления обучения</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-2">Услуги и программы</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Карточка 1 -->
+                <div class="rounded-2xl bg-emeraldCard border border-emeraldBorder p-8 flex flex-col justify-between hover:border-goldAccent/50 transition-all duration-300 relative">
+                    <div>
+                        <div class="inline-block px-3 py-1 rounded-full bg-amber-500/10 text-goldAccent text-xs font-semibold mb-4 border border-goldAccent/30">
+                            Популярное
+                        </div>
+                        <h3 class="font-serif font-bold text-2xl text-white mb-3">Подготовка к ЕГЭ / ОГЭ</h3>
+                        <p class="text-slate-300 text-sm mb-6 leading-relaxed">
+                            Полный разбор всех заданий тестовой части, регулярная практика сочинений по критериям ФИПИ, психологическая подготовка.
+                        </p>
+                        <ul class="space-y-3 mb-8 text-sm text-slate-300">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-goldAccent text-xs"></i> 2 занятия в неделю</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-goldAccent text-xs"></i> Проверка домашних заданий</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-goldAccent text-xs"></i> Пробные экзамены ежемесячно</li>
+                        </ul>
+                    </div>
+                    <a href="#booking" class="w-full py-3 rounded-xl bg-gradient-to-r from-goldAccent to-amber-600 text-emeraldDark font-bold text-center text-sm hover:brightness-110 transition-all">
+                        Записаться на курс
+                    </a>
+                </div>
+
+                <!-- Карточка 2 -->
+                <div class="rounded-2xl bg-emeraldCard border border-emeraldBorder p-8 flex flex-col justify-between hover:border-goldAccent/50 transition-all duration-300">
+                    <div>
+                        <div class="inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-semibold mb-4 border border-emerald-500/20">
+                            5 – 9 классы
+                        </div>
+                        <h3 class="font-serif font-bold text-2xl text-white mb-3">Повышение успеваемости</h3>
+                        <p class="text-slate-300 text-sm mb-6 leading-relaxed">
+                            Устранение пробелов в школьной программе, разбор сложных тем, помощь с домашней работой и подготовка к ВПР.
+                        </p>
+                        <ul class="space-y-3 mb-8 text-sm text-slate-300">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-goldAccent text-xs"></i> Подтянем оценки до «4» и «5»</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-goldAccent text-xs"></i> Развитие грамотности</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-goldAccent text-xs"></i> Интерактивные задания</li>
+                        </ul>
+                    </div>
+                    <a href="#booking" class="w-full py-3 rounded-xl bg-emeraldDark text-white font-semibold border border-emeraldBorder hover:border-goldAccent text-center text-sm transition-all">
+                        Записаться на курс
+                    </a>
+                </div>
+
+                <!-- Карточка 3 -->
+                <div class="rounded-2xl bg-emeraldCard border border-emeraldBorder p-8 flex flex-col justify-between hover:border-goldAccent/50 transition-all duration-300">
+                    <div>
+                        <div class="inline-block px-3 py-1 rounded-full bg-sky-500/10 text-sky-400 text-xs font-semibold mb-4 border border-sky-500/20">
+                            Сочинения
+                        </div>
+                        <h3 class="font-serif font-bold text-2xl text-white mb-3">Литература и сочинения</h3>
+                        <p class="text-slate-300 text-sm mb-6 leading-relaxed">
+                            Обучение написанию идеальных итоговых и декабрьских сочинений, анализ литературных произведений и развитие речи.
+                        </p>
+                        <ul class="space-y-3 mb-8 text-sm text-slate-300">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-goldAccent text-xs"></i> Готовый банк аргументов</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-goldAccent text-xs"></i> Разбор русской классики</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-goldAccent text-xs"></i> Постановка красивой речи</li>
+                        </ul>
+                    </div>
+                    <a href="#booking" class="w-full py-3 rounded-xl bg-emeraldDark text-white font-semibold border border-emeraldBorder hover:border-goldAccent text-center text-sm transition-all">
+                        Записаться на курс
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section id="reviews" class="py-24 bg-emeraldCard/60 border-t border-emeraldBorder">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-semibold uppercase tracking-widest text-goldAccent">Истории успеха</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-2">Отзывы учеников и родителей</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Отзыв 1 -->
+                <div class="p-8 rounded-2xl bg-emeraldCard border border-emeraldBorder flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-goldAccent gap-1 mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-200 italic text-sm leading-relaxed mb-6">
+                            «Благодаря Ясмине я сдала ЕГЭ по русскому языку на 96 баллов! Занятия всегда проходили невероятно интересно. Настоящий профи и очень чуткий преподаватель.»
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-emeraldBorder">
+                        <div class="w-10 h-10 rounded-full bg-emeraldDark text-goldAccent border border-goldAccent/30 flex items-center justify-center font-bold text-sm">
+                            ЕА
+                        </div>
+                        <div>
+                            <p class="font-semibold text-sm text-white">Екатерина А.</p>
+                            <p class="text-xs text-goldAccent">ЕГЭ: 96 баллов</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Отзыв 2 -->
+                <div class="p-8 rounded-2xl bg-emeraldCard border border-emeraldBorder flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-goldAccent gap-1 mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-200 italic text-sm leading-relaxed mb-6">
+                            «Искали репетитора для подготовки к ОГЭ в 9 классе. Сыну очень понравилась подача материала. В итоге сдали на высшую оценку «5». Огромное спасибо!»
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-emeraldBorder">
+                        <div class="w-10 h-10 rounded-full bg-emeraldDark text-goldAccent border border-goldAccent/30 flex items-center justify-center font-bold text-sm">
+                            ОМ
+                        </div>
+                        <div>
+                            <p class="font-semibold text-sm text-white">Ольга Михайловна</p>
+                            <p class="text-xs text-goldAccent">Мама ученика 9 класса</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Отзыв 3 -->
+                <div class="p-8 rounded-2xl bg-emeraldCard border border-emeraldBorder flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-goldAccent gap-1 mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-200 italic text-sm leading-relaxed mb-6">
+                            «Ясмина научила меня писать итоговое сочинение без страха. Раньше не могла связать и двух слов в литературе, а теперь пишу сочинения с удовольствием!»
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-emeraldBorder">
+                        <div class="w-10 h-10 rounded-full bg-emeraldDark text-goldAccent border border-goldAccent/30 flex items-center justify-center font-bold text-sm">
+                            АК
+                        </div>
+                        <div>
+                            <p class="font-semibold text-sm text-white">Алина К.</p>
+                            <p class="text-xs text-goldAccent">Ученица 11 класса</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Запись на урок -->
+    <section id="booking" class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 bg-emeraldCard rounded-3xl p-8 sm:p-12 border border-emeraldBorder gold-border-glow">
+                
+                <!-- Контакты слева -->
+                <div id="contact" class="lg:col-span-5 flex flex-col justify-between space-y-8">
+                    <div>
+                        <span class="text-xs font-semibold uppercase tracking-widest text-goldAccent">Быстрая связь</span>
+                        <h3 class="font-serif text-3xl font-bold text-white mt-2 mb-4">Контакты</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-8">
+                            Оставьте заявку или свяжитесь со мной напрямую через удобные мессенджеры.
+                        </p>
+
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4 p-3 rounded-xl bg-emeraldDark border border-emeraldBorder">
+                                <div class="w-10 h-10 rounded-lg bg-goldAccent/10 text-goldAccent flex items-center justify-center text-base">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-slate-400">Телефон</p>
+                                    <a href="tel:+79990000000" class="text-sm font-semibold text-white hover:text-goldAccent transition-colors">+7 (999) 000-00-00</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-4 p-3 rounded-xl bg-emeraldDark border border-emeraldBorder">
+                                <div class="w-10 h-10 rounded-lg bg-goldAccent/10 text-goldAccent flex items-center justify-center text-base">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-slate-400">Email</p>
+                                    <a href="mailto:yasmina.tutoring@example.com" class="text-sm font-semibold text-white hover:text-goldAccent transition-colors">yasmina.tutoring@example.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Мессенджеры -->
+                    <div>
+                        <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">Написать напрямую:</p>
+                        <div class="flex gap-3">
+                            <a href="https://t.me/" target="_blank" class="flex-1 py-3 px-4 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-medium text-sm flex items-center justify-center gap-2 transition-all">
+                                <i class="fa-brands fa-telegram text-lg"></i>
+                                Telegram
+                            </a>
+                            <a href="https://wa.me/" target="_blank" class="flex-1 py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-sm flex items-center justify-center gap-2 transition-all">
+                                <i class="fa-brands fa-whatsapp text-lg"></i>
+                                WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Форма справа -->
+                <div class="lg:col-span-7 lg:border-l lg:border-emeraldBorder lg:pl-12">
+                    <h3 class="font-serif text-2xl font-bold text-white mb-6">Записаться на занятие</h3>
+                    <form id="lessonForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-slate-300 mb-2">Ваше имя *</label>
+                            <input type="text" required placeholder="Иван Иванов" class="w-full px-4 py-3 rounded-xl border border-emeraldBorder bg-emeraldDark text-white placeholder-slate-500 focus:outline-none focus:border-goldAccent text-sm">
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold uppercase text-slate-300 mb-2">Телефон / Telegram *</label>
+                                <input type="text" required placeholder="+7 (999) 000-00-00" class="w-full px-4 py-3 rounded-xl border border-emeraldBorder bg-emeraldDark text-white placeholder-slate-500 focus:outline-none focus:border-goldAccent text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold uppercase text-slate-300 mb-2">Удобное время</label>
+                                <select class="w-full px-4 py-3 rounded-xl border border-emeraldBorder bg-emeraldDark text-white focus:outline-none focus:border-goldAccent text-sm">
+                                    <option>Утро (09:00 - 12:00)</option>
+                                    <option>День (12:00 - 16:00)</option>
+                                    <option>Вечер (16:00 - 20:00)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-slate-300 mb-2">Класс / Цель обучения</label>
+                            <select class="w-full px-4 py-3 rounded-xl border border-emeraldBorder bg-emeraldDark text-white focus:outline-none focus:border-goldAccent text-sm">
+                                <option>Бесплатный пробный урок</option>
+                                <option>9 класс (Подготовка к ОГЭ)</option>
+                                <option>10-11 класс (Подготовка к ЕГЭ)</option>
+                                <option>5-8 класс (Повышение успеваемости)</option>
+                                <option>Литература и сочинения</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-goldAccent to-amber-600 text-emeraldDark font-bold text-sm hover:brightness-110 shadow-lg transition-all duration-200 mt-2">
+                            Отправить заявку
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-emeraldDark border-t border-emeraldBorder py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div>
+                <p class="font-serif font-bold text-lg text-white">Ясмина Джанибекова</p>
+                <p class="text-xs text-slate-400">Частный преподаватель русского языка и литературы</p>
+            </div>
+            <p class="text-xs text-slate-500">© 2026. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Модальное окно (Modal) -->
+    <div id="modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+        <div class="bg-emeraldCard border border-goldAccent/40 rounded-3xl p-8 max-w-sm w-full text-center shadow-2xl space-y-4">
+            <div class="w-16 h-16 rounded-full bg-goldAccent/10 text-goldAccent flex items-center justify-center text-3xl mx-auto border border-goldAccent/30">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h4 class="font-serif font-bold text-2xl text-white">Заявка успешно отправлена!</h4>
+            <p class="text-slate-300 text-sm leading-relaxed">
+                Спасибо за доверие. Ясмина свяжется с вами в самое ближайшее время для уточнения деталей.
+            </p>
+            <button onclick="closeModal()" class="w-full py-3 rounded-xl bg-goldAccent text-emeraldDark font-bold text-sm hover:brightness-110 transition-all">
+                Закрыть
+            </button>
+        </div>
+    </div>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const modal = document.getElementById('modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.getElementById('lessonForm').reset();
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+    </script>
+</body>
+</html>
